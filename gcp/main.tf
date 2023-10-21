@@ -1,3 +1,4 @@
+
 # Configure the google provider
 provider "google" {
   credentials = file("dev1-284604-bd7c8d3df290.json")
@@ -6,6 +7,8 @@ provider "google" {
   zone        = "europe-west4-a"
 }
 
+# Enable Compute Engine API in project
+# Enable Billing in project
 # Configure the virtual machine instance in GCP
 resource "google_compute_instance" "default" {
   name         = "test"
